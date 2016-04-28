@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>newSite</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		$('.bxslider').bxSlider({
+  			auto: true,
+  			controls: false,
+
+  		});
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+  		$('.bxslider_2').bxSlider({
+  			auto: true,
+  			controls: false,
+
+  		});
+	});
+	</script>
+
+<script type="text/javascript">
+	$(function() {
+			var pull 		= $('#touch-menu');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 500 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+	
+	<script>
+    $(document).ready(function() {
+        var RBStickyNav = $('.RBsticky-element').offset().top;
+        var stickyNav = function() {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > RBStickyNav) {
+                $('.RBsticky-element').addClass('RBSticky');
+            } else {
+                $('.RBsticky-element').removeClass('RBSticky');
+            }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+            stickyNav();
+        });
+    });
+	</script>
+
+	<script type="text/javascript">
+	$(function() {
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+				if(scrollTop != 0)
+				$('.container').stop().animate({'opacity':'0.4'},400);
+				else
+				$('.container').stop().animate({'opacity':'1'},400);
+		});
+
+		$('.container').hover(
+			function (e) {
+			var scrollTop = $(window).scrollTop();
+			if(scrollTop != 0){
+			$('.container').stop().animate({'opacity':'1'},400);
+			}
+		},
+			function (e) {
+			var scrollTop = $(window).scrollTop();
+			if(scrollTop != 0){
+			$('.container').stop().animate({'opacity':'0.4'},400);
+			}
+			}
+		);
+	});
+	</script>
+
+	<script type="text/javascript">
+		$(window).scroll(function(){
+
+			var st = $(this).scrollTop();
+
+			$(".sect_1").css({
+				"transform" : "translate(0%, " + st/50 + "%"
+			})
+
+
+		});
+
+	</script>
+	
+</head>
+<body>
+	<div class="wrap">
+
+		<div class="topbar">
+			<div class="soc">
+				<a href="#">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</div><!--end soc-->
+			<div class="phone">
+				<i class="fa fa-phone"></i>
+				<span>717 865 4127</span>
+				<i class="fa fa-mobile"></i>
+				<span>717 865 2026</span>
+				<i class="fa fa-envelope"></i>
+				<span>info@rsmillerins.com</span>
+			</div><!--end phone-->
+		</div><!--end topbar-->
+
+
+			<div class="obj">
+
+				<div class="container  RBsticky-element">
+					<div class="logo">
+						<a href="#">
+							<img src="images/head-logo.png">
+						</a>
+
+				</div><!--end logo-->
+
+			<a href="#" id="touch-menu">
+				<i class="fa fa-bars"></i>
+			</a>
+				<nav>
+					<ul class="nav clearfix">
+						<li>
+							<a href="#top">
+								HOME
+							</a>
+						</li>
+						<li>
+							<a href="#s_2">
+								ABOUT US
+							</a>
+						</li>
+						<li>
+							<a href="#s_3">
+									PERSONAL
+							</a>
+						</li>
+						<li>
+							<a href="#s_4">
+									BUSINESS
+							</a>
+						</li>
+						<li>
+							<a href="#s_5">
+									CONTACT
+							</a>
+						</li>
+						<li>
+							<button type="button"  class="full"> REQUEST A QUOTE </button>
+						</li>
+					</ul>
+				</nav>
+			</div><!--end container-->
+		</div><!--end obj-->
+
+		<div class="slider">
+			<ul class="bxslider">
+				<li>
+					<img src="images/head-1.jpg">
+
+						<p class="banner1"> STOP THROWING MONEY AWEY!</p>
+
+						<p class="banner2">GET A QUOTE TODAY AND <span>SAVE </span><span class="num">37%</span> </p>
+						<div class="button">
+							<button type="button">REQUEST A QUOTE</button>
+						</div>
+
+				</li>
+					
+				<li>
+					<img src="images/header2.jpg">
+
+						<p class="banner1"> STOP THROWING MONEY AWEY!</p>
+
+						<p class="banner2">GET A QUOTE TODAY AND <span>SAVE </span><span class="num">37%</span> </p>
+						<div class="button">
+							<button type="button">REQUEST A QUOTE</button>
+						</div>
+				</li>
+				<li>
+					<img src="images/header3.jpg">
+						<p class="banner1"> STOP THROWING MONEY AWEY!</p>
+
+						<p class="banner2">GET A QUOTE TODAY AND <span>SAVE </span><span class="num">37%</span> </p>
+						<div class="button">
+							<button type="button">REQUEST A QUOTE</button>
+						</div>
+				</li>
+			</ul>
+		</div>
+
+		<h1>Let Us Help You</h1>
+			<p class="p1"> We continue to take pride in offering quality protection with a name and face the surrounding community can trust</p>
+
+		<div class="colon clearfix">
+
+			<div class="col">
+				<img src="images/zont.jpg">
+					<h3>Personal Insurance</h3>
+						<p>We know insurance can be complex and confusing - that’s why we’re here! Whether it’s for your car or motorcycle.</p>
+							<button type="button">Learn More </button>
+				
+			</div><!--end col-1-->
+			
+			<div class="col">
+				<img src="images/work.jpg">
+					<h3>Business Insurance</h3>
+						<p>As a business owner, you have hundreds of decisions to make every day, and insurance should be your last concern.</p>
+							<button type="button">Learn More </button>
+			</div><!--end col-2-->
+
+			<div class="col">
+				<img src="images/car.jpg">
+					<h3>Auto Insurance</h3>
+						<p>There are over 10 million auto accidents each year in the U.S. Do you have the protection ypu need?</p>
+							<button type="button">Learn More </button>
+			</div><!--end col-3-->
+
+			<div class="col">
+				<img src="images/familly.jpg">
+					<h3>Life Insurance</h3>
+						<p>We know you love your children, your home, and all the things that have made your life...your life.</p>
+							<button type="button">Learn More </button>
+			</div><!--end col-4-->
+		</div><!--end colon-->
+
+		<section class="sect_1">
+			<div class="welcome">
+				<h1>WELCOME</h1>
+				<p>I’d like to take a moment to welcome you to our Agency’s website. Here you will find a wealth of information about us, the companies we represent, and several tools to help protect you, you family, and the things you value most. Please feel free  to take a look around and give our office a call with anu question ou for a free auto, home, business or life insurance quote!</p>
+				<p>-Brain Miller, Principle</p>
+				<div class="button2">
+					<button type="button" class="learn">LEARN MORE</button>
+					<button type="button" class="contact">CONTACT US</button>
+				</div>
+			</div>
+		</section>
+		<div class="slider_2">
+			<img src="images/fon.jpg">
+			<h1>Client Testimonials</h1>
+			<ul class="bxslider_2">
+				<li>
+					<p>I never expected my claim to be this easy. One phone call and two days later my car was back on the road.
+					Praesent sollicitudin, nibh nec mattis lobortis, dui massa eleifend magna. Vivamus orci sem, consectetur ut stibulum a, semper ac dui. Aenean tellus nisl, mmodo eu aliquet ut, pulvinar ut sapien. </p>
+					<p class="michelle">Michelle S</p>
+				</li>
+					
+				<li>
+					<p>I never expected my claim to be this easy. One phone call and two days later my car was back on the road.
+					Praesent sollicitudin, nibh nec mattis lobortis, dui massa eleifend magna. Vivamus orci sem, consectetur ut stibulum a, semper ac dui. Aenean tellus nisl, mmodo eu aliquet ut, pulvinar ut sapien. </p>
+					<p class="michelle">Michelle S</p>
+
+				</li>
+				<li>
+					<p>I never expected my claim to be this easy. One phone call and two days later my car was back on the road.
+					Praesent sollicitudin, nibh nec mattis lobortis, dui massa eleifend magna. Vivamus orci sem, consectetur ut stibulum a, semper ac dui. Aenean tellus nisl, mmodo eu aliquet ut, pulvinar ut sapien. </p>
+					<p class="michelle">Michelle S</p>
+				</li>
+			</ul>
+		</div><!--end slider-->
+
+		<div class="futter">
+			<div class="col col-1"></a>
+				<a href="#"><img src="images/footer-logo.png"></a>
+					<p>The Miller Insurance Agency is proud to be a fourth generation family business and a long-standing symbol of quality service and affordable insurance protection in Central Pennsylvania.</p>
+				
+			</div>
+
+			<div class="col col-2">
+				<h5>Navigate</h5>
+					<ul>
+						<li><a href="#" class="home">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Personal</a></li>
+						<li><a href="#">Business</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Request a quote</a></li>
+					</ul>
+				
+			</div>
+
+			<div class="col col-3">
+				<h5>Contact Info</h5>
+					<p>Miller Insurance Agency</p>	
+						<p>
+						<i class="fa fa-building"></i>
+     						PO Box 445 
+     						21 Blacksmith Lane 
+    						 Jonestown, PA 17039-0445</p>
+					
+						<p>
+							<i class="fa fa-phone"></i>
+							717 865 4127</p>	
+					
+						<p>
+							<i class="fa fa-mobile"></i>
+							717 865 2026</p>
+					
+						<p>
+						<i class="fa fa-envelope"></i>
+						info@rsmillerins.com</p>		
+			</div>
+
+			<div class="col col-4">
+				<h5>We Are Social On</h5>
+					<a href="#">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter"></i>
+					</a>
+				
+			</div>
+			
+		</div>
+
+		<!--<div class="adapt clearfix">
+				<div class="div div2"></div>
+				<div class="div div0"></div>
+				<div class="div div1"></div>
+		</div><!--end adapt-->
+		
+	</div><!--end wrap-->
+
+
+</body>
+</html>
